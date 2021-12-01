@@ -29,4 +29,10 @@ class BreweryClientTest {
         assertNotNull(uri);
         System.out.println(uri.toString());
     }
+
+    @Test
+    void testUpdateBeer() {
+        BeerDto beerDto = BeerDto.builder().beerName("Pale Ale").build();
+        breweryClient.updateBeer(UUID.randomUUID(), beerDto);
+    }
 }
